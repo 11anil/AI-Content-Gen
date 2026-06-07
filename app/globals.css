@@ -74,3 +74,131 @@
       @apply bg-background text-foreground;
     }
   }
+
+  /* Toast UI Editor Dark Mode Overrides */
+  .dark .toastui-editor-default-ui {
+    background-color: rgb(15 23 42 / 0.3) !important;
+    border-color: rgb(30 41 59 / 0.8) !important;
+  }
+  .dark .toastui-editor-toolbar {
+    background-color: rgb(15 23 42 / 0.5) !important;
+    border-bottom: 1px solid rgb(30 41 59 / 0.8) !important;
+  }
+  .dark .toastui-editor-toolbar * {
+    background-color: transparent !important;
+    border-color: rgb(30 41 59 / 0.5) !important;
+    color: rgb(226 232 240) !important;
+  }
+  .dark .toastui-editor-main,
+  .dark .toastui-editor-main-container,
+  .dark .toastui-editor-editor,
+  .dark .toastui-editor-ww-container,
+  .dark .toastui-editor-md-container,
+  .dark .toastui-editor-md-preview,
+  .dark .toastui-editor-contents,
+  .dark .toastui-editor-ww-container .toastui-editor-contents,
+  .dark .toastui-editor-md-container .toastui-editor-contents {
+    background-color: rgb(15 23 42) !important;
+  }
+  .dark .toastui-editor-mode-switch {
+    background-color: rgb(15 23 42 / 0.5) !important;
+    border-top: 1px solid rgb(30 41 59 / 0.8) !important;
+    color: rgb(226 232 240) !important;
+  }
+  .dark .toastui-editor-mode-switch .tab-item {
+    border-color: rgb(30 41 59 / 0.8) !important;
+    background-color: transparent !important;
+    color: rgb(148 163 184) !important;
+  }
+  .dark .toastui-editor-mode-switch .tab-item.active {
+    background-color: rgb(30 41 59 / 0.5) !important;
+    color: rgb(248 250 252) !important;
+  }
+  .dark .toastui-editor-contents,
+  .dark .toastui-editor-contents *,
+  .dark .toastui-editor-contents p,
+  .dark .toastui-editor-contents span,
+  .dark .toastui-editor-contents div,
+  .dark .toastui-editor-contents h1,
+  .dark .toastui-editor-contents h2,
+  .dark .toastui-editor-contents h3,
+  .dark .toastui-editor-contents h4,
+  .dark .toastui-editor-contents h5,
+  .dark .toastui-editor-contents h6,
+  .dark .toastui-editor-contents ul,
+  .dark .toastui-editor-contents ol,
+  .dark .toastui-editor-contents li {
+    color: rgb(226 232 240) !important;
+  }
+  .dark .toastui-editor-md-preview {
+    border-left: 1px solid rgb(30 41 59 / 0.8) !important;
+  }
+  .dark .prose, .dark .toastui-editor-contents {
+    background-color: transparent !important;
+  }
+  .dark .toastui-editor-default-ui button {
+    color: rgb(226 232 240) !important;
+  }
+  .dark .toastui-editor-default-ui button:hover {
+    background-color: rgb(30 41 59 / 0.5) !important;
+  }
+  .dark .toastui-editor-default-ui button.active {
+    background-color: rgb(30 41 59 / 0.8) !important;
+    color: rgb(139 92, 246) !important;
+  }
+  /* Fix popup menu */
+  .dark .toastui-editor-popup {
+    background-color: rgb(15 23 42) !important;
+    border-color: rgb(30 41 59) !important;
+    color: rgb(226 232 240) !important;
+  }
+  .dark .toastui-editor-popup * {
+    color: rgb(226 232 240) !important;
+  }
+
+  /* Prevent Toast UI editor from horizontal overflow and allow toolbar wrapping */
+  .toastui-editor-default-ui {
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+  .toastui-editor-toolbar {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    height: auto !important;
+    gap: 6px !important;
+    padding: 8px 12px !important;
+  }
+  .toastui-editor-toolbar .toastui-editor-toolbar-group {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 4px !important;
+    margin: 0 !important;
+  }
+  .toastui-editor-default-ui .toastui-editor-toolbar button {
+    margin: 0 !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+  }
+
+  /* Selection and focus styling overrides */
+  .dark .toastui-editor-contents::selection,
+  .dark .toastui-editor-contents *::selection {
+    background-color: rgba(139, 92, 246, 0.35) !important;
+    color: #ffffff !important;
+  }
+  .toastui-editor-contents::selection,
+  .toastui-editor-contents *::selection {
+    background-color: rgba(139, 92, 246, 0.2) !important;
+  }
+  .dark .toastui-editor-contents.placeholder::before,
+  .dark .toastui-editor-contents .placeholder::before {
+    color: rgb(100 116 139) !important;
+  }
+
+  /* Hide the Next.js error overlay, dev indicators, and portal dialogs */
+  nextjs-portal, 
+  [data-nextjs-dialog-overlay], 
+  [data-nextjs-toast] {
+    display: none !important;
+  }
